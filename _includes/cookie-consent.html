@@ -1,0 +1,144 @@
+<!-- COOKIE BANNER -->
+<div id="cookieConsent" class="cookie-consent-banner">
+  <button
+    type="button"
+    class="btn-close position-absolute top-0 end-0 m-3"
+    id="closeCookieBox"
+    aria-label="Close"
+  ></button>
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-sm-2 text-center d-none d-md-block">
+        <img
+          src="/images/kubeify-logo.png"
+          alt="ScaleOps Logo"
+          style="max-height: 50px"
+        />
+      </div>
+      <div class="col-sm-7">
+        <h3><strong>This website uses cookies</strong></h3>
+        <p class="cookie-concent">
+          We use cookies to personalise content and ads, to provide social media
+          features and to analyse our traffic. We also share information about
+          your use of our site with our social media, advertising and analytics
+          partners who may combine it with other information that you’ve
+          provided to them or that they’ve collected from your use of their
+          services.
+          <a href="#" class="d-md-none" id="show-details" style="color: blue">
+            Show details
+          </a>
+        </p>
+        <a
+          href="#"
+          class="d-none d-md-block"
+          id="show-details"
+          style="color: blue"
+        >
+          Show details
+        </a>
+      </div>
+      <div class="col-sm-3 text-center">
+        <button id="acceptCookies" class="btn btn-primary btn-lg w-100">
+          Allow all
+        </button>
+        <button
+          id="denyCookies"
+          class="btn btn-outline-secondary btn-lg w-100 mt-2"
+        >
+          Deny
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIE DETAILS MODAL -->
+<div
+  class="modal fade"
+  id="cookieDetailsModal"
+  tabindex="-1"
+  aria-labelledby="cookieDetailsLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered animated fadeInDown">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="cookieDetailsLabel">Cookie Details</h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p class="cookie-concent">
+          <strong>Strictly Necessary Cookies</strong> – Essential for the
+          website to function.
+        </p>
+        <p class="cookie-concent">
+          <strong>Performance Cookies</strong> – Collect info about how visitors
+          use our site.
+        </p>
+        <p class="cookie-concent">
+          <strong>Functionality Cookies</strong> – Remember user choices for
+          enhanced functionality.
+        </p>
+        <p class="cookie-concent">
+          <strong>Targeting/Advertising Cookies</strong> – Deliver relevant ads
+          and track performance.
+        </p>
+        <hr />
+        <p class="cookie-concent">
+          You can manage your preferences through browser settings or by
+          contacting our support.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button id="acceptCookiesmobile" class="btn btn-primary btn-lg w-100">
+          Allow all
+        </button>
+        <button
+          id="denyCookiesmobile"
+          class="btn btn-outline-secondary btn-lg w-100 mt-2"
+        >
+          Deny
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STYLES -->
+<style>
+  .cookie-concent {
+    font-size: 15px;
+  }
+  .cookie-consent-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    z-index: 1055;
+    padding: 30px 20px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animated.fadeInDown {
+    animation: fadeInDown 0.5s ease-out;
+  }
+</style>
