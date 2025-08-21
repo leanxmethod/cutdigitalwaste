@@ -28,7 +28,7 @@ section {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--brand-dark) !important;
-  color: var(--brand-text-light);
+  color: var(--brand-text-light) !important;
 }
 
 /* --- Animated SVG Background --- */
@@ -84,9 +84,9 @@ body {
 
 /* --- Glossy Button Style --- */
 .btn-glossy-orange {
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 1rem 2.5rem !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
   color: var(--brand-dark);
   background-image: linear-gradient(
     45deg,
@@ -94,7 +94,7 @@ body {
     var(--brand-orange)
   );
   border: none;
-  border-radius: 50px;
+  border-radius: 50px !important;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2),
     inset 0 2px 2px rgba(255, 255, 255, 0.2);
@@ -125,7 +125,7 @@ body {
 }
 
 .display-4 {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 .display-4 .highlight {
   background: -webkit-linear-gradient(
@@ -167,7 +167,7 @@ body {
   background-color: var(--brand-dark-secondary);
 }
 .framework-step {
-  background-color: var(--brand-dark);
+  background-color: var(--brand-dark) !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #444;
 }
@@ -190,8 +190,8 @@ body {
 
 /* --- Blog Section Styling --- */
 .card-blog {
-  border: 1px solid #444;
-  background-color: var(--brand-dark-secondary);
+  border: 1px solid #444 !important;
+  background-color: var(--brand-dark-secondary) !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-blog:hover {
@@ -609,17 +609,6 @@ p {
   font-size: 22px;
   font-weight: 900;
 }
-.footer {
-  padding: 3rem 0 0 0;
-  color: #ffffff;
-}
-.lower-footer {
-  background-color: #2b2b2b;
-}
-.copyright {
-  font-size: 16px;
-  color: #fff;
-}
 
 .footer-item {
   width: 100%;
@@ -629,30 +618,6 @@ p {
   @media (max-width: 400px) {
     margin-left: 5px;
   }
-}
-.footer-item h4 {
-  font-size: 18px;
-
-  font-weight: 600;
-  @media (max-width: 400px) {
-    font-size: 13px;
-  }
-}
-.footer-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.footer-nav > li {
-  margin-bottom: 0.3rem !important;
-  font-size: 15px !important;
-  @media (max-width: 360px) {
-    font-size: 12px;
-  }
-}
-.footer-nav > li > a {
-  display: block;
-  color: #9b9b9b;
 }
 
 table {
@@ -670,11 +635,6 @@ td {
 }
 
 .page-bg-header {
-  background-image: url("/images/header-bg-1.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; /* or 'contain' depending on the effect */
-  color: white; /* optional: for text contrast */
   padding: 96px 15px !important;
 }
 
