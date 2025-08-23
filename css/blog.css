@@ -1,26 +1,78 @@
+@import "bootstrap";
+@import "common";
+@import "fonts.css";
+
+:root {
+  /* AWS Inspired Color Palette */
+  --brand-dark: #16191f !important;
+  --brand-dark-secondary: #232f3e;
+  --brand-orange: #ff9900;
+  --brand-light-orange: #f5a623;
+  --brand-light-gray: #eaeded;
+  --brand-text-light: #f1f1f1;
+  --brand-text-secondary: #aab7b8;
+}
 
 body {
-  margin: 0;
-  font-family: "Open Sans";
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: left;
-  background-color: #fff;
+  font-family: "Poppins", sans-serif;
 }
 
-
-.dark-bg{
-  background-color: #031336; /* Background color */
+/* --- Navbar Styling --- */
+.navbar-brand {
+  color: var(--brand-orange) !important;
 }
 
+.btn-glossy-orange {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: var(--brand-dark);
+  background-image: linear-gradient(
+    45deg,
+    var(--brand-light-orange),
+    var(--brand-orange)
+  );
+  border: none;
+  border-radius: 50px !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 2px 2px rgba(255, 255, 255, 0.2);
+  position: relative;
+  background-size: 200% auto;
+}
+.cta-section {
+  background: linear-gradient(45deg, var(--brand-dark-secondary), #000);
+}
+.section-padding {
+  padding: 80px 0;
+}
+
+.footer {
+  background-color: #000;
+}
+.footer a {
+  color: var(--brand-text-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer a:hover {
+  color: var(--brand-orange);
+}
+
+.btn-glossy-orange:hover {
+  color: black;
+  background-position: right center;
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.3),
+    inset 0 2px 2px rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
 
 .feature-img {
   width: 30%;
   height: 30%;
 }
 
-.scroll{
+.scroll {
   max-height: 900px;
   overflow-y: scroll;
 }
@@ -69,21 +121,19 @@ body {
   top: 50%;
   left: 50%;
   max-width: 100%;
-  border: 1px solid #EEE;
+  border: 1px solid #eee;
   box-shadow: 0 0 1px 0 rgba(18, 32, 73, 0.08),
     0 8px 32px 0 rgba(55, 92, 192, 0.08);
 }
 
-
-.blog-content{
-  border: 1px solid #EEE;
+.blog-content {
+  border: 1px solid #eee;
   box-shadow: 0 0 1px 0 rgba(18, 32, 73, 0.08),
     0 8px 32px 0 rgba(55, 92, 192, 0.08);
   min-height: 415px !important;
-
 }
 
-.blog-body{
+.blog-body {
   padding: 10px;
 }
 
@@ -91,13 +141,13 @@ body {
   color: blue;
 }
 
-.post-box{
+.post-box {
   /*border: 1px solid red;*/
   margin-bottom: 10px;
   min-height: 450px !important;
 }
 
-.images-list{
+.images-list {
   margin-bottom: 0px !important;
 }
 
@@ -107,28 +157,25 @@ body {
   margin-bottom: 10px;
 }
 
-
 .blog-post a {
   color: #242424;
   text-decoration: none;
   transition: color 0.1s ease-in-out 0s;
 }
 
-
 .blog-post h1 a:hover,
 .blog-post h1 a:focus {
   color: #2017af;
 }
 
-
 .span4 img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 .span4 .img-left {
-    float: left;
+  float: left;
 }
 .span4 .img-right {
-    float: right;
+  float: right;
 }
 
 .blog-read-more {
@@ -159,23 +206,22 @@ body {
     0 8px 32px 0 rgba(55, 92, 192, 0.08);
 }
 
-.blog-catgory{
+.blog-catgory {
   background-color: #fff;
   padding: 10px;
   box-shadow: 0 0 1px 0 rgba(18, 32, 73, 0.08),
     0 8px 32px 0 rgba(55, 92, 192, 0.08);
 }
 
-.blog-catgory_ul{
+.blog-catgory_ul {
   margin-left: -40px;
-  list-style-type:none;
+  list-style-type: none;
   font-size: 16px !important;
 }
 
-.blog-catgory_li{
+.blog-catgory_li {
   margin-left: -22px;
   font-size: 15px !important;
-
 }
 
 .blog-post-content h1 {
@@ -219,22 +265,22 @@ body {
 }
 
 .btn-danger {
- color: #FFF !important;
+  color: #fff !important;
 }
 
 .btn-success {
- color: #FFF !important;
+  color: #fff !important;
 }
 
 .btn-primary {
- color: #FFF !important;
+  color: #fff !important;
 }
 
 .breadcrumb-item {
-  white-space: nowrap;       /* Prevents text from wrapping */
-  overflow: hidden;          /* Hides overflowing text */
-  text-overflow: ellipsis;   /* Displays "..." for overflowed content */
-  }
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hides overflowing text */
+  text-overflow: ellipsis; /* Displays "..." for overflowed content */
+}
 
 /* Responsive adjustment for smaller devices */
 @media (max-width: 768px) {
