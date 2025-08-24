@@ -26,3 +26,8 @@ jekyll_admin:
 sass:
   sass_dir: _sass
   style: compressed
+
+collections:
+  podcasts:
+    output: true
+    permalink: /podcasts/:title/

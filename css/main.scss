@@ -109,6 +109,38 @@ body {
     inset 0 2px 2px rgba(255, 255, 255, 0.2);
   transform: translateY(-3px);
 }
+.btn-sm-glossy-orange {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: var(--brand-dark);
+  background-image: linear-gradient(
+    45deg,
+    var(--brand-light-orange),
+    var(--brand-orange)
+  );
+  border: none;
+  border-radius: 50px !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 2px 2px rgba(255, 255, 255, 0.2);
+  position: relative;
+  background-size: 200% auto;
+}
+
+.btn-sm-glossy-orange:hover {
+  color: black;
+  background-position: right center;
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.3),
+    inset 0 2px 2px rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+// WHITE PAPER PAGE
+.card-equal-height {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
 
 /* --- General Section Styling --- */
 .section-padding {
@@ -139,6 +171,10 @@ body {
 
 .lead {
   color: var(--brand-text-secondary);
+}
+
+.text-orange {
+  color: var(--brand-orange) !important;
 }
 
 /* --- Checklist Styling --- */
@@ -237,10 +273,6 @@ body {
 }
 
 /* --- Navbar Styling --- */
-.navbar {
-  background-color: rgba(22, 25, 31, 0.85);
-  backdrop-filter: blur(10px);
-}
 .navbar-brand {
   color: var(--brand-orange) !important;
 }
