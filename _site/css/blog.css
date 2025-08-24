@@ -16,10 +16,27 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+.container {
+  max-width: 1170px;
+}
 
 /* --- Navbar Styling --- */
 .navbar-brand {
   color: var(--brand-orange) !important;
+}
+.cm-header {
+  /* position: absolute; */
+  position: sticky;
+  top: 0;
+  color: #fff;
+  background: transparent;
+  & nav .nav-link {
+    color: #fff;
+  }
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
 }
 
 .btn-glossy-orange {
