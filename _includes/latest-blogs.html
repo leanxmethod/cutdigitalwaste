@@ -1,13 +1,20 @@
 <section class="dark-bg">
-  <div class="container py-5 latest-blogs">
-    <h1 class="mb-4 grd-text text-center">Latest Blogs</h1>
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">
+        Latest <span class="highlight">Insights & Strategies</span>
+      </h2>
+      <p class="lead">
+        Stay ahead with our expert advice on digital efficiency.
+      </p>
+    </div>
     <div class="row">
       {% assign classes = "slide-left,slide-up,slide-right" | split: "," %} {%
       for post in site.posts limit:3 %}
       <div class="col-md-4">
         <a href="{{ post.url }}" class="text-decoration-none text-dark">
           <div
-            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+            class="card card-blog h-100 shadow-sm border-0 blog-card hover-animate-card"
           >
             <img
               src="{{ post.image }}"
@@ -15,30 +22,17 @@
               alt="{{ post.title }}"
               style="object-fit: cover"
             />
-            <div class="card-body d-flex flex-column">
-              <span class="badge bg-secondary mb-1 w-auto align-self-start"
-                >{{ post.category }}</span
-              >
-              <h5 class="card-title mt-2">{{ post.title }}</h5>
+            <div class="card-body">
+              <span class="badge mb-2">{{ post.category }}</span>
+              <h5 class="card-title">{{ post.title }}</h5>
               <p class="card-text">
                 {{ post.excerpt | strip_html | truncate: 100 }}
               </p>
-              {% assign hash = post.url | size %} {% assign time = hash |
-              modulo: 6 | plus: 4 %}
-              <div
-                class="mt-auto d-flex align-items-center gap-3 small"
-                style="color: #b0b3b8"
-              >
-                <span>
-                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
-
-                  {{ post.date | date: "%b %d, %Y" }}
-                </span>
-                <span>
-                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
-                  {{ time }} mins
-                </span>
-              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <a href="#" class="fw-semibold text-decoration-none"
+                >Read More <i class="bi bi-arrow-right"></i
+              ></a>
             </div>
           </div>
         </a>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% seo %} {% include favicon.html %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/blog.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!--
+      HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
+    <header class="default-header cm-header">{% include header.html %}</header>
+    <!-- Main Podcast Player Section -->
+    <div style="margin-top: 80px">
+      <div class="container">
+        <div class="card bg-secondary text-white rounded-3xl p-3 shadow-lg">
+          <!-- Card Body -->
+          <div class="d-flex flex-column flex-md-row gap-4">
+            <div
+              class="flex-grow-1 d-flex flex-column"
+              style="justify-content: space-between"
+            >
+              <!-- Header section -->
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <button
+                    id="playPauseBtn"
+                    class="text-white hover:text-light transition-colors duration-200 bg-transparent border-0"
+                  >
+                    <i class="fas fa-play fa-2x"></i>
+                  </button>
+                  <h2 class="h5 font-weight-bold">Satya Neerupudi</h2>
+                  <span class="text-muted small"
+                    >{{ page.date | date: "%Y" }}</span
+                  >
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  {% if page.tags %} {% for tag in page.tags %}
+                  <span class="text-muted small">#{{ tag }}</span>
+                  {% endfor %} {% endif %}
+                </div>
+              </div>
+
+              <!-- Title and waveform section -->
+              <div class="mt-2 d-flex flex-column align-items-start w-100">
+                <h3 class="h4 font-weight-semibold">{{ page.title }}</h3>
+                <div class="position-relative w-100" style="height: 4rem">
+                  <img
+                    src="/images/waveform.jpg"
+                    alt="Audio Waveform"
+                    class="position-absolute w-100 h-100 object-fit-stretch"
+                  />
+                </div>
+                <div class="w-100 mt-2 d-flex align-items-center">
+                  <span id="currentTime" class="text-muted small me-2"
+                    >0:00</span
+                  >
+                  <div
+                    id="progressBar"
+                    class="flex-grow-1 bg-dark rounded-pill"
+                    style="height: 6px; cursor: pointer"
+                  >
+                    <div
+                      id="progressFill"
+                      class="bg-primary rounded-pill h-100"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                  <span id="totalDuration" class="text-muted small ms-2"
+                    >--:--</span
+                  >
+                </div>
+              </div>
+
+              <!-- Audio Player Element (hidden) -->
+              <audio id="audioPlayer" src="{{ page.podcast_file }}"></audio>
+              <div
+                id="error-message"
+                class="text-danger small mt-2 d-none"
+              ></div>
+
+              <!-- New: Progress Bar and Time Display -->
+            </div>
+
+            <div class="d-flex flex-column align-items-center">
+              <img
+                src="/images/Satya-Neerupudi.jpeg"
+                alt="Album Art"
+                class="image-responsive w-100"
+              />
+              {% if page.artist_bio %} {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action Section (Replaces comments) -->
+
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-8">{%include cta.html%}</div>
+
+          <!-- Optional: Related Tracks or Other Content -->
+          <div class="col-md-4">
+            <!-- Optional: Related Tracks or Other Content -->
+            <div
+              class="card bg-secondary text-white h-100 rounded-3xl p-3 shadow-lg"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center mb-4"
+              >
+                <h4 class="h5 font-weight-bold">RELATED TRACKS</h4>
+                <a
+                  href="#"
+                  class="small text-muted hover:text-white transition-colors duration-200"
+                  >View all</a
+                >
+              </div>
+              <!-- This section would also be a Liquid loop for related posts -->
+              <div class="space-y-2">
+                {% assign count = 0 %} {% for podcast in site.podcasts %} {% if
+                podcast.url != page.url and count < 3 %}
+                <a href="{{ podcast.url }}" class="text-decoration-none">
+                  <div
+                    class="d-flex align-items-center gap-4 p-2 rounded-lg transition-colors duration-200 hover:bg-dark"
+                  >
+                    <img
+                      src="/images/Satya-Neerupudi.jpeg"
+                      alt="{{ podcast.title }}"
+                      class="image-responsive"
+                      style="width: 60px"
+                    />
+                    <div class="flex-grow-1">
+                      <h5 class="small font-weight-semibold text-white">
+                        {{ podcast.title }}
+                      </h5>
+                      <p class="text-xs text-muted mb-0">Satya Neerupudi</p>
+                    </div>
+                  </div>
+                </a>
+                {% assign count = count | plus: 1 %} {% endif %} {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+    <!-- Include Modal Partial -->
+    {% include modal.html %} {% include cookie-consent.html %}
+    <script src="{{ '/js/cookie-consent.js' | relative_url }}"></script>
+    <script src="{{ '/js/modal.js' | relative_url }}"></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const playPauseBtn = document.getElementById("playPauseBtn");
+        const audioPlayer = document.getElementById("audioPlayer");
+        const errorMessage = document.getElementById("error-message");
+        const progressBar = document.getElementById("progressBar");
+        const progressFill = document.getElementById("progressFill");
+        const currentTimeEl = document.getElementById("currentTime");
+        const totalDurationEl = document.getElementById("totalDuration");
+
+        if (playPauseBtn && audioPlayer) {
+          // Initial state and loading indicator
+          const playIcon = playPauseBtn.querySelector("i");
+          playIcon.classList.remove("fa-play");
+          playIcon.classList.add("fa-spinner", "fa-spin");
+
+          audioPlayer.oncanplaythrough = () => {
+            playIcon.classList.remove("fa-spinner", "fa-spin");
+            playIcon.classList.add("fa-play");
+            totalDurationEl.textContent = formatTime(audioPlayer.duration);
+          };
+
+          audioPlayer.onerror = (e) => {
+            playIcon.classList.remove("fa-spinner", "fa-spin");
+            playIcon.classList.add("fa-exclamation-triangle");
+            errorMessage.textContent =
+              "Failed to load audio. Please check the file path.";
+            errorMessage.classList.remove("d-none");
+            console.error("Audio error:", e);
+          };
+
+          playPauseBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            const icon = playPauseBtn.querySelector("i");
+            if (audioPlayer.paused) {
+              audioPlayer.play();
+              icon.classList.remove("fa-play");
+              icon.classList.add("fa-pause");
+            } else {
+              audioPlayer.pause();
+              icon.classList.remove("fa-pause");
+              icon.classList.add("fa-play");
+            }
+          });
+
+          audioPlayer.addEventListener("ended", () => {
+            const icon = playPauseBtn.querySelector("i");
+            icon.classList.remove("fa-pause");
+            icon.classList.add("fa-play");
+            progressBar.style.width = "0%";
+          });
+
+          audioPlayer.addEventListener("timeupdate", () => {
+            const progress =
+              (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progressFill.style.width = `${progress}%`;
+            currentTimeEl.textContent = formatTime(audioPlayer.currentTime);
+          });
+
+          progressBar.addEventListener("click", (e) => {
+            const rect = progressBar.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const newTime = (clickX / rect.width) * audioPlayer.duration;
+            audioPlayer.currentTime = newTime;
+          });
+
+          function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
