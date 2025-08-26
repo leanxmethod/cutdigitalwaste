@@ -74,29 +74,52 @@
   </head>
 
   <body class="">
-    <header class="default-header cm-header"><nav class="navbar navbar-expand-lg bg-dark text-white sticky-top">
+    <header class="default-header cm-header"><nav
+  class="navbar navbar-expand-lg bg-dark text-white fixed-top d-none d-md-flex"
+>
   <div class="container">
     <a class="navbar-brand fw-bold" href="/">Cut Digital Waste</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <!-- Desktop menu collapse -->
+    <div class="collapse navbar-collapse" id="navbarNavDesktop">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#what-is-waste">The Problem</a>
+          <a class="nav-link" href="/#framework">The Method</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#framework">Our Solution</a>
+          <a class="nav-link" href="/#services">Services</a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Case Study</a>
+        </li>
+        <!-- New Insights dropdown menu for desktop -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarInsightsDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Insights
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-dark"
+            aria-labelledby="navbarInsightsDropdown"
+          >
+            <li><a class="dropdown-item" href="/blog.html">Blogs</a></li>
+            <li><a class="dropdown-item" href="/podcast.html">Podcasts</a></li>
+            <li>
+              <a class="dropdown-item" href="/white-paper.html">White Paper</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
         <li class="nav-item ms-lg-3">
           <button
             class="btn btn-glossy-orange px-4 py-2"
@@ -110,314 +133,419 @@
     </div>
   </div>
 </nav>
-</header>
-    <div>  <section class="hero-section text-center">
-    <div class="animated-svg-container">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill="#FF9900"
-          d="M47.3,-67.3C61.8,-57.4,74.5,-44,80.3,-28.5C86.1,-13,85,4.6,78.8,20.1C72.5,35.6,61.1,49,47.4,61.1C33.7,73.2,16.8,84.1,0.9,82.9C-15,81.7,-30,68.5,-44.5,56.5C-59,44.5,-73.1,33.7,-79.8,18.9C-86.5,4.1,-85.9,-14.7,-78.3,-30.2C-70.7,-45.8,-56.1,-58.1,-41.1,-67.7C-26.1,-77.3,-13.1,-84.2,2.3,-86.2C17.7,-88.1,35.4,-85.1,47.3,-67.3Z"
-          transform="translate(100 100)"
-        ></path>
-      </svg>
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill="#FF9900"
-          d="M37.8,-49.6C51.6,-40.1,67.3,-29.4,74,-15C80.8,-0.6,78.7,17.6,69.5,32.3C60.3,47,44,58.2,27.5,65.8C11,73.4,-5.7,77.5,-23.1,73.8C-40.6,70.1,-58.8,58.6,-68.8,43C-78.8,27.4,-80.6,7.7,-75.9,-9.5C-71.2,-26.7,-60,-41.4,-46.4,-50.8C-32.8,-60.2,-16.4,-64.3,-1.9,-62.4C12.6,-60.5,25.1,-59,37.8,-49.6Z"
-          transform="translate(100 100)"
-        ></path>
-      </svg>
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill="#FF9900"
-          d="M51.9,-54.3C65.8,-44.4,74.7,-27.1,75.9,-9.3C77.1,8.5,70.6,26.8,59.3,42.2C48,57.7,31.9,70.3,14,75.1C-3.9,79.9,-23.7,76.9,-39.8,67.3C-55.9,57.7,-68.3,41.5,-73.8,23.6C-79.4,5.7,-78.2,-13.9,-69.5,-29.8C-60.8,-45.7,-44.7,-57.8,-28.3,-65.4C-11.9,-73,5.9,-76.1,23.2,-72.2C40.6,-68.3,51.9,-54.3,51.9,-54.3Z"
-          transform="translate(100 100)"
-        ></path>
-      </svg>
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill="#FF9900"
-          d="M42.3,-51.7C57.4,-44.8,74.1,-36,76.9,-23.7C79.7,-11.4,68.5,4.4,58.8,18.8C49.1,33.2,40.8,46.1,29.1,55.9C17.4,65.7,2.3,72.4,-14.2,71.2C-30.7,70,-48.6,60.9,-59.5,47.1C-70.4,33.3,-74.3,14.8,-70.7,-2C-67,-18.8,-55.9,-34,-43.3,-41.8C-30.7,-49.7,-16.7,-50.3,-3.8,-49.2C9,-48.1,18.1,-55.3,42.3,-51.7Z"
-          transform="translate(100 100)"
-        ></path>
-      </svg>
-    </div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <h1 class="display-4 mb-4">
-            Stop Losing Thousands on
-            <span class="highlight">Digital Waste</span>
-          </h1>
-          <p class="lead mb-5">
-            75% of SMEs waste 15–30% of their digital budget. It's time to
-            reclaim your profits with our proven framework.
-          </p>
-          <button
-            class="btn btn-glossy-orange"
-            data-bs-toggle="modal"
-            data-bs-target="#auditModal"
-          >
-            🚀 Book Free Digital Audit Now
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="what-is-waste" class="section-padding">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h2 class="fw-bold mb-4">
-            What Is <span class="highlight">Digital Waste?</span>
-          </h2>
-          <p class="lead mb-4">
-            Digital waste is the silent profit killer in your organization. It's
-            the accumulated cost of inefficiencies you might not even see,
-            hiding in plain sight and draining your budget month after month.
-          </p>
-          <p class="text-secondary">
-            It's more than just money—it's wasted time, lost opportunities, and
-            decreased team morale. Identifying it is the first step to
-            eliminating it for good.
-          </p>
-        </div>
-        <div class="col-lg-6">
-          <div class="checklist-card p-4 p-md-5 rounded-3">
-            <ul class="checklist">
+<!-- Mobile Navigation (Offcanvas) - Hidden on desktop -->
+<nav class="navbar navbar-expand-lg bg-dark text-white fixed-top d-md-none">
+  <div class="container px-2">
+    <a class="navbar-brand fw-bold" href="/">Cut Digital Waste</a>
+    <!-- Mobile hamburger button to toggle offcanvas -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- The offcanvas container for the mobile menu -->
+    <div
+      class="offcanvas offcanvas-end bg-dark text-white"
+      style="width: 70%"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+          Cut Digital Waste
+        </h5>
+        <!-- The cross button to close the menu -->
+        <button
+          type="button"
+          class="btn-close text-reset btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" href="/#framework">The Method</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Case Study</a>
+          </li>
+          <!-- New Insights dropdown for mobile -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="offcanvasInsightsDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Insights
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-dark"
+              aria-labelledby="offcanvasInsightsDropdown"
+            >
+              <li><a class="dropdown-item" href="/blog.html">Blogs</a></li>
               <li>
-                <i class="bi bi-x-circle-fill"></i> Unused software licenses &
-                subscriptions
+                <a class="dropdown-item" href="/podcast.html">Podcasts</a>
               </li>
               <li>
-                <i class="bi bi-hdd-stack-fill"></i> Legacy tools slowing down
-                your team
-              </li>
-              <li>
-                <i class="bi bi-stopwatch-fill"></i> Manual approvals and
-                repetitive tasks
-              </li>
-              <li>
-                <i class="bi bi-cloud-slash-fill"></i> Idle IT spend and
-                oversized cloud resources
-              </li>
-              <li>
-                <i class="bi bi-graph-down-arrow"></i> No KPIs or dashboards to
-                track performance
+                <a class="dropdown-item" href="/white-paper.html"
+                  >White Paper</a
+                >
               </li>
             </ul>
-          </div>
-        </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item mt-3 mt-lg-0 ms-lg-3">
+            <button
+              class="btn btn-glossy-orange px-4 py-2 w-100"
+              data-bs-toggle="modal"
+              data-bs-target="#auditModal"
+              data-bs-dismiss="offcanvas"
+            >
+              Book Free Audit
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <section id="framework" class="section-padding">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">
-          Your Fix – The <span class="highlight">L.E.A.N-X™</span> Framework
-        </h2>
-        <p class="lead">5 Steps. 30 Days. €30K–100K Saved.</p>
-      </div>
-      <div class="row g-4 text-center justify-content-center">
-        <div class="col-lg-2 col-md-4">
-          <div class="card h-100 p-4 rounded-3 framework-step">
-            <div class="framework-icon mb-3">
-              <i class="bi bi-search"></i>
-            </div>
-            <h5 class="fw-bold text-white">Learn</h5>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4">
-          <div class="card h-100 p-4 rounded-3 framework-step">
-            <div class="framework-icon mb-3">
-              <i class="bi bi-scissors"></i>
-            </div>
-            <h5 class="fw-bold text-white">Eliminate</h5>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4">
-          <div class="card h-100 p-4 rounded-3 framework-step">
-            <div class="framework-icon mb-3">
-              <i class="bi bi-robot"></i>
-            </div>
-            <h5 class="fw-bold text-white">Automate</h5>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4">
-          <div class="card h-100 p-4 rounded-3 framework-step">
-            <div class="framework-icon mb-3">
-              <i class="bi bi-compass"></i>
-            </div>
-            <h5 class="fw-bold text-white">Normalize</h5>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4">
-          <div class="card h-100 p-4 rounded-3 framework-step">
-            <div class="framework-icon mb-3">
-              <i class="bi bi-rocket-takeoff"></i>
-            </div>
-            <h5 class="fw-bold text-white">eXcel</h5>
-          </div>
-        </div>
+<style>
+  /* Custom styles for the mobile toggler button */
+  .navbar-toggler {
+    border: none;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .nav-link.show {
+    color: white !important;
+  }
+</style>
+</header>
+    <div class="mt-5"><section class="hero-section text-center">
+  <div class="animated-svg-container">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="#FF9900"
+        d="M47.3,-67.3C61.8,-57.4,74.5,-44,80.3,-28.5C86.1,-13,85,4.6,78.8,20.1C72.5,35.6,61.1,49,47.4,61.1C33.7,73.2,16.8,84.1,0.9,82.9C-15,81.7,-30,68.5,-44.5,56.5C-59,44.5,-73.1,33.7,-79.8,18.9C-86.5,4.1,-85.9,-14.7,-78.3,-30.2C-70.7,-45.8,-56.1,-58.1,-41.1,-67.7C-26.1,-77.3,-13.1,-84.2,2.3,-86.2C17.7,-88.1,35.4,-85.1,47.3,-67.3Z"
+        transform="translate(100 100)"
+      ></path>
+    </svg>
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="#FF9900"
+        d="M37.8,-49.6C51.6,-40.1,67.3,-29.4,74,-15C80.8,-0.6,78.7,17.6,69.5,32.3C60.3,47,44,58.2,27.5,65.8C11,73.4,-5.7,77.5,-23.1,73.8C-40.6,70.1,-58.8,58.6,-68.8,43C-78.8,27.4,-80.6,7.7,-75.9,-9.5C-71.2,-26.7,-60,-41.4,-46.4,-50.8C-32.8,-60.2,-16.4,-64.3,-1.9,-62.4C12.6,-60.5,25.1,-59,37.8,-49.6Z"
+        transform="translate(100 100)"
+      ></path>
+    </svg>
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="#FF9900"
+        d="M51.9,-54.3C65.8,-44.4,74.7,-27.1,75.9,-9.3C77.1,8.5,70.6,26.8,59.3,42.2C48,57.7,31.9,70.3,14,75.1C-3.9,79.9,-23.7,76.9,-39.8,67.3C-55.9,57.7,-68.3,41.5,-73.8,23.6C-79.4,5.7,-78.2,-13.9,-69.5,-29.8C-60.8,-45.7,-44.7,-57.8,-28.3,-65.4C-11.9,-73,5.9,-76.1,23.2,-72.2C40.6,-68.3,51.9,-54.3,51.9,-54.3Z"
+        transform="translate(100 100)"
+      ></path>
+    </svg>
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="#FF9900"
+        d="M42.3,-51.7C57.4,-44.8,74.1,-36,76.9,-23.7C79.7,-11.4,68.5,4.4,58.8,18.8C49.1,33.2,40.8,46.1,29.1,55.9C17.4,65.7,2.3,72.4,-14.2,71.2C-30.7,70,-48.6,60.9,-59.5,47.1C-70.4,33.3,-74.3,14.8,-70.7,-2C-67,-18.8,-55.9,-34,-43.3,-41.8C-30.7,-49.7,-16.7,-50.3,-3.8,-49.2C9,-48.1,18.1,-55.3,42.3,-51.7Z"
+        transform="translate(100 100)"
+      ></path>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h1 class="display-4 mb-4">
+          Stop Losing Thousands on
+          <span class="highlight">Digital Waste</span>
+        </h1>
+        <p class="lead mb-5">
+          75% of SMEs waste 15–30% of their digital budget. It's time to reclaim
+          your profits with our proven framework.
+        </p>
+        <button
+          class="btn btn-glossy-orange"
+          data-bs-toggle="modal"
+          data-bs-target="#auditModal"
+        >
+          🚀 Book Free Digital Audit Now
+        </button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="blog" class="section-padding">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">
-          Latest <span class="highlight">Insights & Strategies</span>
+<section id="what-is-waste" class="section-padding">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-4">
+          What Is <span class="highlight">Digital Waste?</span>
         </h2>
-        <p class="lead">
-          Stay ahead with our expert advice on digital efficiency.
+        <p class="lead mb-4">
+          Digital waste is the silent profit killer in your organization. It's
+          the accumulated cost of inefficiencies you might not even see, hiding
+          in plain sight and draining your budget month after month.
+        </p>
+        <p class="text-secondary">
+          It's more than just money—it's wasted time, lost opportunities, and
+          decreased team morale. Identifying it is the first step to eliminating
+          it for good.
         </p>
       </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="card card-blog h-100 rounded-3 overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop"
-              class="card-img-top"
-              alt="Blog Image 1"
-            />
-            <div class="card-body">
-              <span class="badge mb-2">Automation</span>
-              <h5 class="card-title">
-                5 Manual Tasks You Can Automate This Week
-              </h5>
-              <p class="card-text">
-                Discover simple automation that can save your team hours of work
-                and reduce human error immediately.
-              </p>
-            </div>
-            <div class="card-footer bg-transparent border-0 pb-3">
-              <a href="#" class="fw-semibold text-decoration-none"
-                >Read More <i class="bi bi-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card card-blog h-100 rounded-3 overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1470&auto=format&fit=crop"
-              class="card-img-top"
-              alt="Blog Image 2"
-            />
-            <div class="card-body">
-              <span class="badge mb-2">Cost Saving</span>
-              <h5 class="card-title">Are You Paying for "Shelfware"?</h5>
-              <p class="card-text">
-                That software you bought last year and never used is costing you
-                more than you think. Here's how to fix it.
-              </p>
-            </div>
-            <div class="card-footer bg-transparent border-0 pb-3">
-              <a href="#" class="fw-semibold text-decoration-none"
-                >Read More <i class="bi bi-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card card-blog h-100 rounded-3 overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1470&auto=format&fit=crop"
-              class="card-img-top"
-              alt="Blog Image 3"
-            />
-            <div class="card-body">
-              <span class="badge mb-2">Productivity</span>
-              <h5 class="card-title">Building KPIs That Actually Matter</h5>
-              <p class="card-text">
-                Stop tracking vanity metrics. Learn to build a dashboard that
-                gives you actionable insights into your business.
-              </p>
-            </div>
-            <div class="card-footer bg-transparent border-0 pb-3">
-              <a href="#" class="fw-semibold text-decoration-none"
-                >Read More <i class="bi bi-arrow-right"></i
-              ></a>
-            </div>
-          </div>
+      <div class="col-lg-6">
+        <div class="checklist-card p-4 p-md-5 rounded-3">
+          <ul class="checklist">
+            <li>
+              <i class="bi bi-x-circle-fill"></i> Unused software licenses &
+              subscriptions
+            </li>
+            <li>
+              <i class="bi bi-hdd-stack-fill"></i> Legacy tools slowing down
+              your team
+            </li>
+            <li>
+              <i class="bi bi-stopwatch-fill"></i> Manual approvals and
+              repetitive tasks
+            </li>
+            <li>
+              <i class="bi bi-cloud-slash-fill"></i> Idle IT spend and oversized
+              cloud resources
+            </li>
+            <li>
+              <i class="bi bi-graph-down-arrow"></i> No KPIs or dashboards to
+              track performance
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="cta-section section-padding text-center">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <h2 class="fw-bold mb-4">
-            Ready to Unlock <span class="highlight">€30K–100K</span> in Savings?
-          </h2>
-          <p class="lead mb-5">
-            Your journey to digital efficiency starts with one free,
-            no-obligation audit. Let us show you exactly where you can save
-            money and improve performance.
-          </p>
-          <button
-            class="btn btn-glossy-orange fs-5"
-            data-bs-toggle="modal"
-            data-bs-target="#auditModal"
-          >
-            Claim My Free Audit
-          </button>
+<section id="framework" class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">
+        Your Fix – The <span class="highlight">L.E.A.N-X™</span> Framework
+      </h2>
+      <p class="lead">5 Steps. 30 Days. €30K–100K Saved.</p>
+    </div>
+    <div class="row g-4 text-center justify-content-center">
+      <div class="col-lg-2 col-md-4">
+        <div class="card h-100 p-4 rounded-3 framework-step">
+          <div class="framework-icon mb-3">
+            <i class="bi bi-search"></i>
+          </div>
+          <h5 class="fw-bold text-white">Learn</h5>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div class="card h-100 p-4 rounded-3 framework-step">
+          <div class="framework-icon mb-3">
+            <i class="bi bi-scissors"></i>
+          </div>
+          <h5 class="fw-bold text-white">Eliminate</h5>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div class="card h-100 p-4 rounded-3 framework-step">
+          <div class="framework-icon mb-3">
+            <i class="bi bi-robot"></i>
+          </div>
+          <h5 class="fw-bold text-white">Automate</h5>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div class="card h-100 p-4 rounded-3 framework-step">
+          <div class="framework-icon mb-3">
+            <i class="bi bi-compass"></i>
+          </div>
+          <h5 class="fw-bold text-white">Normalize</h5>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div class="card h-100 p-4 rounded-3 framework-step">
+          <div class="framework-icon mb-3">
+            <i class="bi bi-rocket-takeoff"></i>
+          </div>
+          <h5 class="fw-bold text-white">eXcel</h5>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div
-    class="modal fade"
-    id="auditModal"
-    tabindex="-1"
-    aria-labelledby="auditModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div
-        class="modal-content"
-        style="
-          background-color: var(--brand-dark-secondary);
-          border: 1px solid #444;
-        "
-      >
-        <div class="modal-header border-0">
-          <h5 class="modal-title fw-bold" id="auditModalLabel">
-            <span class="highlight">Book Your Free Digital Audit</span>
-          </h5>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+<section id="blog" class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">
+        Latest <span class="highlight">Insights & Strategies</span>
+      </h2>
+      <p class="lead">
+        Stay ahead with our expert advice on digital efficiency.
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-blog h-100 rounded-3 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop"
+            class="card-img-top"
+            alt="Blog Image 1"
+          />
+          <div class="card-body">
+            <span class="badge mb-2">Automation</span>
+            <h5 class="card-title">
+              5 Manual Tasks You Can Automate This Week
+            </h5>
+            <p class="card-text">
+              Discover simple automation that can save your team hours of work
+              and reduce human error immediately.
+            </p>
+          </div>
+          <div class="card-footer bg-transparent border-0 pb-3">
+            <a href="#" class="fw-semibold text-decoration-none"
+              >Read More <i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
         </div>
-        <div class="modal-body p-0">
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://calendly.com/razorops/demo?embed_domain=razorops.com&embed_type=Inline"
-              frameborder="0"
-              style="width: 100%; height: 100%"
-            ></iframe>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-blog h-100 rounded-3 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1470&auto=format&fit=crop"
+            class="card-img-top"
+            alt="Blog Image 2"
+          />
+          <div class="card-body">
+            <span class="badge mb-2">Cost Saving</span>
+            <h5 class="card-title">Are You Paying for "Shelfware"?</h5>
+            <p class="card-text">
+              That software you bought last year and never used is costing you
+              more than you think. Here's how to fix it.
+            </p>
+          </div>
+          <div class="card-footer bg-transparent border-0 pb-3">
+            <a href="#" class="fw-semibold text-decoration-none"
+              >Read More <i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-blog h-100 rounded-3 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1470&auto=format&fit=crop"
+            class="card-img-top"
+            alt="Blog Image 3"
+          />
+          <div class="card-body">
+            <span class="badge mb-2">Productivity</span>
+            <h5 class="card-title">Building KPIs That Actually Matter</h5>
+            <p class="card-text">
+              Stop tracking vanity metrics. Learn to build a dashboard that
+              gives you actionable insights into your business.
+            </p>
+          </div>
+          <div class="card-footer bg-transparent border-0 pb-3">
+            <a href="#" class="fw-semibold text-decoration-none"
+              >Read More <i class="bi bi-arrow-right"></i
+            ></a>
           </div>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
-</html>
+<section class="cta-section section-padding text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-4">
+          Ready to Unlock <span class="highlight">€30K–100K</span> in Savings?
+        </h2>
+        <p class="lead mb-5">
+          Your journey to digital efficiency starts with one free, no-obligation
+          audit. Let us show you exactly where you can save money and improve
+          performance.
+        </p>
+        <button
+          class="btn btn-glossy-orange fs-5"
+          data-bs-toggle="modal"
+          data-bs-target="#auditModal"
+        >
+          Claim My Free Audit
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div
+  class="modal fade"
+  id="auditModal"
+  tabindex="-1"
+  aria-labelledby="auditModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div
+      class="modal-content"
+      style="
+        background-color: var(--brand-dark-secondary);
+        border: 1px solid #444;
+      "
+    >
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="auditModalLabel">
+          <span class="highlight">Book Your Free Digital Audit</span>
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://calendly.com/razorops/demo?embed_domain=razorops.com&embed_type=Inline"
+            frameborder="0"
+            style="width: 100%; height: 100%"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 
     <footer class="footer py-5">
@@ -753,5 +881,10 @@
 
     <script src="/js/cookie-consent.js"></script>
     <script src="/js/modal.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
