@@ -22,18 +22,23 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "podcast"
-    label: "Podcast"
+  - name: "podcasts"
+    label: "Podcasts"
     folder: "_podcasts"
     create: true
     slug: "{{slug}}"
+    media_folder: "/audios"
+    public_folder: "/audios"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Layout", name: "layout", widget: "string" }
-      - { label: "permalink", name: "permalink", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Podcast File", name: "podcast_file", widget: "file" }
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "string",
+          default: "podcast",
+          required: false,
+        }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }

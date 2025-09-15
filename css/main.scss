@@ -25,10 +25,13 @@ section {
   --brand-text-secondary: #aab7b8;
 }
 
+html,
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--brand-dark) !important;
   color: var(--brand-text-light) !important;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* --- Animated SVG Background --- */
@@ -483,12 +486,6 @@ p {
   .hero_testimonial {
     display: none;
   }
-}
-
-/*-----Call to Action end-------*/
-
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
 }
 
 /*-----LATEST BLOGS-----*/

@@ -1,13 +1,13 @@
 # Site settings
-title: Kubeify
+title: Cut Digital Waste
 email: support@kubeify.com
 description: >
-  Kubeify - a team who helps teams to quick start with Kubernetes & docker based DevOps process.
+  Discover how to eliminate digital waste and reclaim your profits with our proven L.E.A.N-X™ framework. Book your free audit today!
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://kubeify.com/" # the base hostname & protocol for your site
-twitter_username: kubeify
-github_username: kubeify
+url: "https://cutdigitalwaste.com/" # the base hostname & protocol for your site
+twitter_username:
+github_username:
 
 # Build settings
 markdown: kramdown

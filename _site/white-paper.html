@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>White Paper | Kubeify</title>
+<title>White Paper | Cut Digital Waste</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="White Paper" />
 <meta property="og:locale" content="en_US" />
@@ -13,7 +13,7 @@
 <meta property="og:description" content="Your developers enjoy the benefits of Kubernetes. We do everything else. We are your Kubernetes ops team." />
 <link rel="canonical" href="https://kubeify.com/services" />
 <meta property="og:url" content="https://kubeify.com/services" />
-<meta property="og:site_name" content="Kubeify" />
+<meta property="og:site_name" content="Cut Digital Waste" />
 <meta property="og:image" content="http://localhost:4000/images/services.png" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -74,29 +74,52 @@
   </head>
 
   <body class="">
-    <header class="default-header cm-header"><nav class="navbar navbar-expand-lg bg-dark text-white sticky-top">
+    <header class="default-header cm-header"><nav
+  class="navbar navbar-expand-lg bg-dark text-white fixed-top d-none d-md-flex"
+>
   <div class="container">
     <a class="navbar-brand fw-bold" href="/">Cut Digital Waste</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <!-- Desktop menu collapse -->
+    <div class="collapse navbar-collapse" id="navbarNavDesktop">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#what-is-waste">The Problem</a>
+          <a class="nav-link" href="/#framework">The Method</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#framework">Our Solution</a>
+          <a class="nav-link" href="/#services">Services</a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Case Study</a>
+        </li>
+        <!-- New Insights dropdown menu for desktop -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarInsightsDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Insights
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-dark"
+            aria-labelledby="navbarInsightsDropdown"
+          >
+            <li><a class="dropdown-item" href="/blog.html">Blogs</a></li>
+            <li><a class="dropdown-item" href="/podcast.html">Podcasts</a></li>
+            <li>
+              <a class="dropdown-item" href="/white-paper.html">White Paper</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
         <li class="nav-item ms-lg-3">
           <button
             class="btn btn-glossy-orange px-4 py-2"
@@ -110,8 +133,120 @@
     </div>
   </div>
 </nav>
+
+<!-- Mobile Navigation (Offcanvas) - Hidden on desktop -->
+<nav class="navbar navbar-expand-lg bg-dark text-white fixed-top d-md-none">
+  <div class="container px-2">
+    <a class="navbar-brand fw-bold" href="/">Cut Digital Waste</a>
+    <!-- Mobile hamburger button to toggle offcanvas -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- The offcanvas container for the mobile menu -->
+    <div
+      class="offcanvas offcanvas-end bg-dark text-white"
+      style="width: 70%"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+          Cut Digital Waste
+        </h5>
+        <!-- The cross button to close the menu -->
+        <button
+          type="button"
+          class="btn-close text-reset btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" href="/#framework">The Method</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Case Study</a>
+          </li>
+          <!-- New Insights dropdown for mobile -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="offcanvasInsightsDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Insights
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-dark"
+              aria-labelledby="offcanvasInsightsDropdown"
+            >
+              <li><a class="dropdown-item" href="/blog.html">Blogs</a></li>
+              <li>
+                <a class="dropdown-item" href="/podcast.html">Podcasts</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/white-paper.html"
+                  >White Paper</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item mt-3 mt-lg-0 ms-lg-3">
+            <button
+              class="btn btn-glossy-orange px-4 py-2 w-100"
+              data-bs-toggle="modal"
+              data-bs-target="#auditModal"
+              data-bs-dismiss="offcanvas"
+            >
+              Book Free Audit
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* Custom styles for the mobile toggler button */
+  .navbar-toggler {
+    border: none;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .nav-link.show {
+    color: white !important;
+  }
+</style>
 </header>
-    <div><div class="container my-5">
+    <div class="mt-5"><div class="container py-5 my-5">
   <header class="text-center mb-5">
     <h1 class="display-4 fw-bold mb-2">White Paper & Resource Library</h1>
     <p class="lead">
@@ -121,18 +256,10 @@
   </header>
 
   <section class="mb-5">
-    <h2 class="h4 fw-bold mb-4">Gated PDFs (Email Required)</h2>
     <div class="row align-items-center g-5">
       <div class="col-lg-6 text-center text-lg-start">
-        <h1 class="display-5 fw-bolder mb-3">
-          LEAN-X for CIOs – 5-Step Framework for 2025
-        </h1>
-        <p class="lead mb-4">
-          A framework for CIOs to drive digital efficiency and reduce cloud
-          waste. This guide will provide actionable steps to align your
-          technology strategy with business goals and eliminate unnecessary
-          costs.
-        </p>
+        <h1 class="display-5 fw-bolder mb-3" id="gated-title"></h1>
+        <p class="lead mb-4" id="gated-description"></p>
         <div class="row fw-semibold text-start">
           <div class="col-sm-6">
             <p><span>&#x2713;</span> Actionable steps</p>
@@ -150,6 +277,7 @@
           <h3 class="h4 fw-bold text-center text-orange mb-2">
             Request the Guide
           </h3>
+          <p class="text-center text-white">Get Resources on your email</p>
           <p
             id="responseMessage"
             class="text-center small fw-semibold mb-4"
@@ -170,7 +298,7 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Email *"
+                placeholder="Enter Valid Email *"
                 required
                 class="form-control form-control-lg rounded-3"
               />
@@ -180,8 +308,7 @@
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder="Mobile with country code *"
-                required
+                placeholder="Mobile with country code"
                 class="form-control form-control-lg rounded-3"
               />
             </div>
@@ -190,8 +317,7 @@
                 type="text"
                 id="company_linkedin"
                 name="company_linkedin"
-                placeholder="Website / Linkedin profile *"
-                required
+                placeholder="Website / Linkedin profile"
                 class="form-control form-control-lg rounded-3"
               />
             </div>
@@ -222,53 +348,100 @@
   </section>
 
   <section class="mb-5">
-    <h2 class="h4 fw-bold mb-4">Free, Ungated PDFs</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      <!-- Ungated Card 1 -->
-      <div class="col">
-        <div class="card card-equal-height shadow-lg rounded-3 p-4 text-center">
-          <div class="h2 text-orange mb-3">
-            <i class="fas fa-file-pdf"></i>
-          </div>
-          <h3 class="h5 fw-bold mb-2">Top 10 Digital Wastes – Audit Guide</h3>
-          <p class="text-muted mb-4">
-            A comprehensive guide to identifying and eliminating common sources
-            of digital waste in your organization.
-          </p>
-          <a
-            href="#"
-            class="btn btn-sm-glossy-orange mt-auto rounded-pill transition-all duration-300"
-          >
-            Download PDF
-          </a>
-        </div>
-      </div>
-      <!-- Ungated Card 2 -->
-      <div class="col">
-        <div class="card card-equal-height shadow-lg rounded-3 p-4 text-center">
-          <div class="h2 text-orange mb-3">
-            <i class="fas fa-file-pdf"></i>
-          </div>
-          <h3 class="h5 fw-bold mb-2">A Guide to Kubernetes Security</h3>
-          <p class="text-muted mb-4">
-            Learn the best practices for securing your Kubernetes clusters and
-            containers from modern threats.
-          </p>
-          <a
-            href="#"
-            class="btn btn-sm-glossy-orange mt-auto rounded-pill transition-all duration-300"
-          >
-            Download PDF
-          </a>
-        </div>
-      </div>
+    <h2 class="h4 fw-bold mb-4">Explore More</h2>
+    <div
+      id="ungated-cards-container"
+      class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+    >
+      <!-- White paper cards will be dynamically inserted here by JavaScript -->
     </div>
   </section>
 </div>
 
 <!-- Bootstrap JS with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+  // White paper data store
+  const whitePapers = [
+    {
+      id: "1",
+      title: "Top 10 Digital Wastes – Audit Guide",
+      description:
+        "A comprehensive guide to identifying and eliminating common sources of digital waste in your organization.",
+    },
+    {
+      id: "2",
+      title: "A Guide to Kubernetes Security",
+      description:
+        "Learn the best practices for securing your Kubernetes clusters and containers from modern threats.",
+    },
+    {
+      id: "3",
+      title: "LEAN-X for CIOs – 5-Step Framework for 2025",
+      description:
+        "A framework for CIOs to drive digital efficiency and reduce cloud waste. This guide will provide actionable steps to align your technology strategy with business goals and eliminate unnecessary costs.",
+    },
+  ];
+
+  // Function to render the cards for white papers
+  function renderWhitePaperCards(activePaperId) {
+    const container = document.getElementById("ungated-cards-container");
+    container.innerHTML = ""; // Clear existing cards
+
+    // Filter out the active white paper and render the rest
+    const cardsToRender = whitePapers.filter(
+      (paper) => paper.id !== activePaperId
+    );
+
+    cardsToRender.forEach((paper) => {
+      const cardHtml = `
+        <div class="col">
+          <div class="card card-equal-height shadow-lg rounded-3 p-4 text-center">
+            <div class="h2 text-orange mb-3">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-2">${paper.title}</h3>
+            <p class="text-muted mb-4">${paper.description}</p>
+            <button
+              class="btn btn-sm-glossy-orange mt-auto rounded-pill transition-all duration-300 view-white-paper-btn"
+              data-id="${paper.id}"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      `;
+      container.innerHTML += cardHtml;
+    });
+
+    // Re-attach event listeners to the newly rendered buttons
+    document.querySelectorAll(".view-white-paper-btn").forEach((button) => {
+      button.addEventListener("click", function () {
+        const paperId = this.getAttribute("data-id");
+        updateGatedForm(paperId);
+      });
+    });
+  }
+
+  // Function to update the gated form section with selected white paper data
+  function updateGatedForm(paperId) {
+    const selectedPaper = whitePapers.find((paper) => paper.id === paperId);
+    if (selectedPaper) {
+      document.getElementById("gated-title").textContent = selectedPaper.title;
+      document.getElementById("gated-description").textContent =
+        selectedPaper.description;
+      renderWhitePaperCards(paperId);
+      document
+        .getElementById("gated-title")
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  // Initial page load: show the default white paper at the top
+  window.onload = function () {
+    updateGatedForm("3"); // '3' is the ID for the default LEAN-X paper
+  };
+
+  // Event listener for form submission
   document
     .getElementById("contactForm")
     .addEventListener("submit", function (event) {
@@ -657,5 +830,10 @@
 
     <script src="/js/cookie-consent.js"></script>
     <script src="/js/modal.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
