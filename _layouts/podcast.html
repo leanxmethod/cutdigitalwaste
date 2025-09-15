@@ -40,7 +40,7 @@
   <body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
     <header class="default-header cm-header">{% include header.html %}</header>
     <!-- Main Podcast Player Section -->
-    <div style="margin-top: 80px">
+    <div class="py-5 my-5" style="background-color: #121212">
       <div class="container">
         <div class="card bg-secondary text-white rounded-3xl p-3 shadow-lg">
           <!-- Card Body -->
@@ -75,7 +75,7 @@
                 <h3 class="h4 font-weight-semibold">{{ page.title }}</h3>
                 <div class="position-relative w-100" style="height: 4rem">
                   <img
-                    src="/images/waveform.jpg"
+                    src="/images/waveform.png"
                     alt="Audio Waveform"
                     class="position-absolute w-100 h-100 object-fit-stretch"
                   />
@@ -115,7 +115,8 @@
               <img
                 src="/images/Satya-Neerupudi.jpeg"
                 alt="Album Art"
-                class="image-responsive w-100"
+                class="image-responsive"
+                style="width: 200px; border-radius: 1rem"
               />
               {% if page.artist_bio %} {% endif %}
             </div>
@@ -202,7 +203,7 @@
           // Initial state and loading indicator
           const playIcon = playPauseBtn.querySelector("i");
           playIcon.classList.remove("fa-play");
-          playIcon.classList.add("fa-spinner", "fa-spin");
+          playIcon.classList.add("fa-play");
 
           audioPlayer.oncanplaythrough = () => {
             playIcon.classList.remove("fa-spinner", "fa-spin");
