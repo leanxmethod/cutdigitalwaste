@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<header class="page-bg-header text-center">
+  <h1>{{ page.title }}</h1>
+  <p class="lead">🛠 {{ page.company }}</p>
+  <p class="text-muted">
+    🏭 {{ page.industry }} | 👥 {{ page.size }} | 📍 {{ page.location }}
+  </p>
+</header>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Left Column (8) -->
+      <div class="col-md-8">
+        <img
+          src="{{ page.image }}"
+          class="img-fluid rounded shadow mb-4"
+          alt="{{ page.company }}"
+        />
+
+        <h3>💡 Problem</h3>
+        <p>{{ page.problem }}</p>
+
+        <h3>🧩 Solution</h3>
+        <p>{{ page.solution }}</p>
+
+        <h3>💰 ROI</h3>
+        <p>{{ page.roi }}</p>
+
+        <div class="mt-4">
+          <a href="{{ page.pdf }}" class="btn btn-primary" target="_blank">
+            📄 Download Full PDF
+          </a>
+        </div>
+
+        <div class="mt-5">{{ content }}</div>
+      </div>
+
+      <!-- Right Column (4) -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 mb-4">
+          <div class="card-body">
+            <h5 class="card-title">🛠 Tech Stack</h5>
+            <ul class="mb-0">
+              {% for tech in page.techstack %}
+              <li class="mb-2">
+                <i class="fa-solid fa-check-circle text-success me-2"></i>{{
+                tech }}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

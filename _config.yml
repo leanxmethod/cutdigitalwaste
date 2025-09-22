@@ -31,3 +31,7 @@ collections:
   podcasts:
     output: true
     permalink: /podcasts/:title/
+
+  case-studies:
+    output: true
+    permalink: /case-studies/:name/

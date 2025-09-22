@@ -1,0 +1,48 @@
+---
+layout: default
+title: Case Studies
+description: Discover how companies solved real problems with our solutions.
+canonical_url: "https://cutdigitalwaste.com/case-studies"
+image: /images/case-studies.png
+---
+
+<header class="page-bg-header text-center">
+  <h1>Case Studies</h1>
+  <p class="lead">Real success stories from our clients</p>
+</header>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+      {% for study in site.case-studies %}
+      <div class="col-md-4">
+        <a href="{{ study.url }}" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm border-0 hover-animate-card">
+            <img
+              src="{{ study.image }}"
+              class="card-img-top"
+              alt="{{ study.title }}"
+              style="object-fit: cover"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">🛠 {{ study.company }}</h5>
+              <p class="card-text text-muted small">
+                🏭 {{ study.industry }} | 👥 {{ study.size }} | 📍 {{
+                study.location }}
+              </p>
+              <p><strong>💡</strong> {{ study.problem }}</p>
+              <p><strong>🧩</strong> {{ study.solution }}</p>
+              <p><strong>💰</strong> {{ study.roi }}</p>
+              <span class="btn btn-outline-primary mt-auto"
+                >📄 View Full Case Study</span
+              >
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

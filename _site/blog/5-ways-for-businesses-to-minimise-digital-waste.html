@@ -44,6 +44,7 @@
 
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/blog.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -74,7 +75,7 @@
           <a class="nav-link" href="/#services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Case Study</a>
+          <a class="nav-link" href="/case-studies.html">Case Study</a>
         </li>
         <!-- New Insights dropdown menu for desktop -->
         <li class="nav-item dropdown">
@@ -407,7 +408,7 @@ Prioritize creating valuable, audience-focused content informed by SEO research 
           performance.
         </p>
         <button
-          class="btn btn-light text-primary fw-bold rounded-pill px-5 py-3 fs-5"
+          class="btn btn-glossy-orange fw-bold rounded-pill px-5 py-3 fs-5"
           data-bs-toggle="modal"
           data-bs-target="#auditModal"
         >
@@ -417,6 +418,45 @@ Prioritize creating valuable, audience-focused content informed by SEO research 
     </div>
   </div>
 </section>
+
+<div
+  class="modal fade"
+  id="auditModal"
+  tabindex="-1"
+  aria-labelledby="auditModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div
+      class="modal-content"
+      style="
+        background-color: var(--brand-dark-secondary);
+        border: 1px solid #444;
+      "
+    >
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="auditModalLabel">
+          <span class="highlight">Book Your Free Digital Audit</span>
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://calendly.com/satya-leanxmethod/30min?back=&month=2025-08&embed_type=Inline"
+            frameborder="0"
+            style="width: 100%; height: 100%"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
  <footer class="footer py-5">
   <div class="container">
     <div class="row">
@@ -455,5 +495,10 @@ Prioritize creating valuable, audience-focused content informed by SEO research 
   </div>
 </footer>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
