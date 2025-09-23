@@ -15,9 +15,19 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Layout", name: "layout", widget: "string" }
-      - { label: "permalink", name: "permalink", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "string", default: "post" }
+      - {
+          label: "permalink",
+          name: "permalink",
+          widget: "string",
+          default: "blog/:title",
+        }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "string",
+          default: "Satya Neerupudi",
+        }
       - { label: "Category", name: "category", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
