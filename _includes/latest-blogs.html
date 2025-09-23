@@ -26,7 +26,7 @@
               <span class="badge mb-2">{{ post.category }}</span>
               <h5 class="card-title">{{ post.title }}</h5>
               <p class="card-text">
-                {{ post.excerpt | strip_html | truncate: 100 }}
+                {{ post.description | strip_html | truncate: 100 }}
               </p>
             </div>
             <div class="card-footer bg-transparent border-0 pb-3">
